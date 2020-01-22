@@ -7,6 +7,7 @@ var y = [1];
 function scopeDemo(y1) {
     console.log(x)
     let a = 3, b = 4, c = 5;
+    x1[0] = 500;
     console.log(a);
     console.log(b);
     console.log(c);
