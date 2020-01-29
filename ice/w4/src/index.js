@@ -1,10 +1,12 @@
 import Component from "./Component.js";
-var Component from "./Component.js";
+
+
 function runOnLoad()
 {
     
     let element = document.createElement("div");
     element.id = "container";
+    
     document.body.appendChild(element);
     // console.log(x);
     var comp = new Component(document.getElementById("addTaskPane"));
@@ -18,6 +20,7 @@ function runOnLoad()
         content: "This is a task"
         }
     )
+
     let container  = document.getElementById("container");
     let task = document.createElement("div");
    
