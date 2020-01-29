@@ -1,7 +1,5 @@
-import Task from ("./Task.js");
 
-
-class Component {
+class Task{
     constructor(_button) {
         this.button = _button;
         console.log("Test");
@@ -11,7 +9,7 @@ class Component {
         console.log("Clicked");
     }
     render() {
-        return `<div></div>`;
+        return this.content;
     }
 
 }
