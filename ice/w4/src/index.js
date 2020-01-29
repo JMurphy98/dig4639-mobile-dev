@@ -11,7 +11,7 @@ function runOnLoad()
     // console.log(x);
     var comp = new Component(document.getElementById("addTaskPane"));
     let element2 = document.createElement("div");
-    container.appendChild(element2);
+ 
   
 
     let firstTask = new Task (
