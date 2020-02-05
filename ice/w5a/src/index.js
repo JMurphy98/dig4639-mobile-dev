@@ -24,4 +24,6 @@ function onClick() {
     element.appendChild(newTask.render());
     input.value = "";
 }
+
+
     window.addEventListener("DOMContentLoaded", runOnLoad);
