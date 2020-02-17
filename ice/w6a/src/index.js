@@ -15,7 +15,7 @@ function Square(props) {
       renderSquare(i) {
           return (
             <Square>
-              value= {this.props.squares[i]}
+              value= {this.props.squares[i]};
               onClick={() => this.props.onClick(i)}
             </Square>
           );
