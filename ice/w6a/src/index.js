@@ -14,10 +14,10 @@ function Square(props) {
   class Board extends React.Component {
       renderSquare(i) {
           return (
-            <Square 
-              value={this.props.squares[i]}
+            <Square>
+              value= {this.props.squares[i]}
               onClick={() => this.props.onClick(i)}
-            />
+            </Square>
           );
         }
   
@@ -93,7 +93,7 @@ render() {
   const moves = history.map((step, move) => {
     const desc = move ?
       'Go to move #' + move :
-      'Goo to game start';
+      'Go to game start';
     return (
       <li key={move}>
         <button onClick={() => this.jumpTo(move)}>{desc}</button>
