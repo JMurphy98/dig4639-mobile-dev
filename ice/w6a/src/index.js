@@ -14,10 +14,10 @@ function Square(props) {
   class Board extends React.Component {
       renderSquare(i) {
           return (
-            <Square>
-              value= {this.props.squares[i]};
+            <Square
+              value= {this.props.squares[i]}
               onClick={() => this.props.onClick(i)}
-            </Square>
+            />
           );
         }
   
@@ -59,7 +59,7 @@ function Square(props) {
     }
 
 
-  handleClick(i) {
+  handleClick = (i) => {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -74,11 +74,11 @@ function Square(props) {
         }
       ]),
       stepNumber:history.length,
-      xIsNext: !this.state.xIssNext
+      xIsNext: !this.state.xIsNext
     });
   }
 
-  jumpTo(step) {
+  jumpTo (step) {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
@@ -90,7 +90,8 @@ render() {
   const current = history[this.state.stepNumber];
   const winner = calculateWinner(current.squares);
 
-  const moves = history.map((step, move) => {
+  const moves = history.map(
+    (step, move) => {
     const desc = move ?
       'Go to move #' + move :
       'Go to game start';
@@ -103,23 +104,23 @@ render() {
 
     let status;
     if (winner) {
-      status = 'Winner: ' +  winner;
+      status = "Winner: " +  winner;
     }
     else {
-      status = 'Next player: ' + (this.state.xIsNext ? "X" : "0");
+      status = "Next player: " + (this.state.xIsNext ? "X" : "0");
     }
 
     return (
       <div className="game">
-        <div className="gmae board">
+        <div className="game-board">
           <Board
             squares={current.squares}
-            onClicklick={i => this.handleClick(i)}
+            onClick={i => this.handleClick(i)}
           />
         </div>
         <div className="game-info">
           <div>{status}</div>
-          <ol>>{moves}</ol>
+          <ol>{moves}</ol>
         </div>
       </div>
     );
@@ -127,7 +128,7 @@ render() {
 }
   // ========================================
   
-  ReactDOM.render(<Game />, document.getElementById('root'));
+  ReactDOM.render(<Game />, document.getElementById("root"));
 
   function calculateWinner(squares) {
     const lines = [

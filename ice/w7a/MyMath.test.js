@@ -8,7 +8,7 @@ describe('Testing Addlist', () => {
     expect(result).toBe(10);
     list = [1,2,3,4,100,1000];
     result = Addlist(list);
-    expect(result.toBe(10110);
+    expect(result.toBe(10110)
   })
   it('Member of list is undefined', ()=>{
     let list = [1,undefined,3,4];
