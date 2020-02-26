@@ -5,10 +5,11 @@ class Card extends React.Component{
   render(){
     return (
       <div className = "card">
-        {this.props.content}
+        <span className="close" onClick={() => this.props.clickMe()}>&times;</span>
+        <h3>{this.props.title}</h3>
+        <p>{this.props.content}</p>
       </div>
     )
   }
 }
-
-export default Card;
+export default Card
