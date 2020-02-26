@@ -1,5 +1,5 @@
 [
   {"id": "1", "priority": 2, "completed": true },
-  {"content": "Task 2", "priority": 1, "completed": true },
-  {"content": "Task 3", "priority": 3, "completed": false }
+  {"id": "2", "priority": 1, "completed": true },
+  {"id": "3", "priority": 3, "completed": false }
 ]
