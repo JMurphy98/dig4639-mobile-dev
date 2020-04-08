@@ -1,0 +1,92 @@
+[
+  {
+    "question": "LOTR stands for what",
+    "answers":
+    [
+      {"text": "Lord of the Ruins",
+       "correct": false
+      },
+      {"text": "Lord of the Rabbits",
+        "correct": false
+       },
+       {"text": "Lord of the Rings",
+        "correct": true
+       },
+       {"text": "Lord of the Romance",
+        "correct": false
+       }
+    ]
+  },
+  {
+    "question": "Who is Iron Man?",
+    "answers":
+    [
+      {"text": "Steve Rogers",
+        "correct": false
+       },
+       {"text": "Tony Stark",
+         "correct": true
+        },
+        {"text": "Bruce Wayne",
+         "correct": false
+        },
+        {"text": "Bruce Banner",
+         "correct": false
+        }
+    ]
+  },
+  {
+    "question": "Where is the Soul Stone located in the MCU",
+    "answers":
+    [
+      {"text": "Vormir",
+        "correct": true
+       },
+       {"text": "Earth",
+         "correct": false
+        },
+        {"text": "The Unknown",
+         "correct": false
+        },
+        {"text": "Asgard",
+         "correct": false
+        }
+    ]
+  },
+  {
+    "question": "Live long and prosper is a saying from which species?",
+    "answers":
+    [
+      {"text": "Humans",
+        "correct": false
+       },
+       {"text": "Vulcan",
+         "correct": true
+        },
+        {"text": "Borg",
+         "correct": false
+        },
+        {"text": "Hutt",
+         "correct": false
+        }
+    ]
+  },
+  {
+    "question": "What color is the Sith's Lightsaber?",
+    "answers":
+    [
+      {"text": "Orange",
+        "correct": false
+       },
+       {"text": "White",
+         "correct": false
+        },
+        {"text": "Black",
+         "correct": false
+        },
+        {"text": "Red",
+         "correct": true
+        }
+    ]
+  }
+]
