@@ -2,8 +2,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import TodoScreen from '../screens/TodoScreen';
+import NewTaskistScreen from '../screens/NewTaskScreen';
+
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -18,18 +19,18 @@ export default function BottomTabNavigator({ navigation, route }) {
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
         name="Home"
-        component={HomeScreen}
+        component={TodoScreen}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'TODO',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-list" />,
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="New"
+        component={NewTaskScreen}
         options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          title: 'New Task',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-add" />,
         }}
       />
     </BottomTab.Navigator>
@@ -41,8 +42,8 @@ function getHeaderTitle(route) {
 
   switch (routeName) {
     case 'Home':
-      return 'How to get started';
+      return 'Current TODO List';
     case 'Links':
-      return 'Links to learn more';
+      return 'New task screen';
   }
 }

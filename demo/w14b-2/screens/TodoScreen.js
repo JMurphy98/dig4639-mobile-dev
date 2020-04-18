@@ -6,8 +6,29 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
 
-export default class HomeScreen extends React.Component {
+export default class TodoScreen extends React.Component {
   state = {todoList:[]}
+  constructor(props){
+    super(props)
+    const didFocusSubsription =this.props.navigation.addListener(
+      'focus',
+      () => {
+        console.log('didfocus');
+      }
+    );
+  }
+  componentWillUnmount() {
+    this.props.navigation.remove.Listener(thithi.didFocusSubsriptions)
+  }
+  getCurrentTasks(){
+    fetch('http://plato.mrl.ai:8080/todo', {
+    headers:{
+      "API":"murray"
+    }
+    })
+  }
+}
+  
 
   componentDidMount() {
     fetch('http://plato.mrl.ai:8080/todo', {
@@ -21,6 +42,8 @@ export default class HomeScreen extends React.Component {
         this.setState({todoList:body.todo})
       })
   }
+
+
 
   // Implement completing the task on the server
   completeTask(position, state) {
@@ -66,7 +89,7 @@ export default class HomeScreen extends React.Component {
   }
 }
 
-HomeScreen.navigationOptions = {
+TodoScreen.navigationOptions = {
   header: null,
 };
 
