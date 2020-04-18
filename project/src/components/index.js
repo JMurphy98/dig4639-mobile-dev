@@ -55,7 +55,7 @@ class ContactApp extends React.Component {
     }
 
     remove = (index) => {
-        fetch('https://plato.mrl.ai:8080/contacts/remove', {
+        fetch('http://plato.mrl.ai:8080/contacts/remove', {
         method: 'POST',
         body: JSON.stringify({ position: index }),
         headers: { "Content-type": "application/json", API: "murphy" }
