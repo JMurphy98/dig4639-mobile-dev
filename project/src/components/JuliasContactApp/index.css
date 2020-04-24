@@ -4,7 +4,7 @@ body {
     background: #DDCAEA;
 }
 fieldset{
-    background: #F8F5FB;
+    background: rgb(229, 231, 235);
     display: block;
     border-radius: 10px;
 }
@@ -20,7 +20,7 @@ h2{
     font-family: 'Comfortaa',;
     text-align: center;
     font-size: 30px;
-    border: 3px solid #843EB2;
+    border-bottom: 3px solid #843EB2;
     width: 30%;
     margin: 0px auto 10px auto; 
     padding: 5px;
@@ -71,7 +71,7 @@ input{
 }
 
 .card{
-    border: 1px solid black;
+    border: 2px solid black;
     margin: 10px
 }
 button{
@@ -94,12 +94,3 @@ button:hover{
     height: 97%;
 }
 
-@media only screen and (max-width: 800px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .containersmall{
-      width: 50%
-    }
-}

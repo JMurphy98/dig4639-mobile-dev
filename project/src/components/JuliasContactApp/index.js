@@ -107,7 +107,7 @@ render() {
                     {this.state.contacts.map((value, index) => {
                         return (
                             <fieldset className="card">
-                                <legend key={index}>{index + 1}</legend>
+                                
                                 <h4>{value.name}</h4>
                                 <p>{value.number} </p>
                                 <div className="buttondiv">
