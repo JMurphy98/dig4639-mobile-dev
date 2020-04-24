@@ -1,8 +1,8 @@
 import React from 'react'
-import {StyleSheet, Test, View} from'react-native'
+import {StyleSheet, Text, View} from'react-native'
 import {Button} from 'react-native-elements'
 
-const style = StyleSheet.create({
+const styles= StyleSheet.create({
   timer: {
     width:425,
     padding: 10,
@@ -19,12 +19,12 @@ class Timer extends React.Component{
   constructor(props){
     super(props);
     this.state= {seconds: 0};
-    this.tick=this.tick.bindthis();
+    this.tick= () => this.tickTok()
   }
-  tick (){
+  tickTok (){
     this.interval = setInterval(()=> {
       this.setState(prvState =>  ({
-        seconds: pevState.seconds + 1
+        seconds: prvState.seconds + 1
       }));
     }, 1000);
   }
@@ -34,7 +34,7 @@ class Timer extends React.Component{
   render(){
     return(
       <View>
-      <Text style={style.timerText}>Time: {this.state.seconds}</Text>
+      <Text style={styles.timerText}>Time: {this.state.seconds}</Text>
       <Button style={styles.timer} title= "Start the Clock!" onPress={this.tick}/>
       </View>
     );

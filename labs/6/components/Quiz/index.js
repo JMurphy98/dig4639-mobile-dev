@@ -1,13 +1,13 @@
-import Reaceat from 'react'
-import { StyleSheet, View } from 'react-native'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 import {Button} from 'react-native-elements'
 import questions from './questions.json'
-import Tiimer from '../Timer'
+import Timer from '../Timer'
 
 const TITLE_STATE =0
 const QUESTION_STATE =1
 
-const styles=StyleSheet.create({
+const styles =StyleSheet.create({
   button: {
     width:400,
     padding: 10,
@@ -44,15 +44,15 @@ export default class Quiz extends React.Component{
         <View>
           <Text style={styles.text}>Are you a Geek?</Text>
           <Button style={styles.button} title="Start" 
-            onPress={() => this.setState({ currentState: QUESTION_STATE })
+            onPress={() => this.setState({ currentState: QUESTION_STATE})
             }/>
         </View>
-        : (this.state.currentQuestion< questions.length)?
+        :(this.state.currentQuestion< questions.length)?
         <View>
-          <Text style={styles.text}>{question [this.state.currentQuestion].question}
+          <Text style={styles.text}>{questions[this.state.currentQuestion].question}
           </Text>
           <View>
-            {questions[this.state.currentQueustion].anwsers.map((ans, i)=> {
+            {questions[this.state.currentQuestion].answers.map((ans, i)=> {
               return <Button style={styles.button} title={ans.text} key={i} onPress={() => this.nextQuestion(ans)} />
                 
             })}
