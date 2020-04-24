@@ -15,7 +15,7 @@ const style = StyleSheet.create({
     textAlign: 'center'
   }
 })
-class Tiimer extends React.Component{
+class Timer extends React.Component{
   constructor(props){
     super(props);
     this.state= {seconds: 0};

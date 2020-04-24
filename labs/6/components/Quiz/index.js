@@ -43,7 +43,7 @@ export default class Quiz extends React.Component{
 
         <View>
           <Text style={styles.text}>Are you a Geek?</Text>
-          <Button style={style.button} title="Start" 
+          <Button style={styles.button} title="Start" 
             onPress={() => this.setState({ currentState: QUESTION_STATE })
             }/>
         </View>
